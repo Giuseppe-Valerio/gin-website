@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "London Dry Gin",
+    "slug": "london-dry",
+    "image": "/assets/images/london-dry.jpg",
+    "description": "Aroma fresco di ginepro e agrumi.",
+    "botanicals": ["Ginepro", "Pepe nero", "Foglie di ulivo"],
+    "tastingNotes": "Al naso si sentono vivaci ma gentili il ginepro e le note agrumate. All'assaggio il ginepro e il pepe nero lasciano spazio alla dolcezza delle foglie di ulivo.",
+    "alcohol": "40% vol",
+    "price": 35,
+    "volume": "50cl"
+  },
+  {
+    "id": 2,
+    "name": "Lemon Gin",
+    "slug": "lemon-gin",
+    "image": "/assets/images/lemon-dry.jpg",
+    "description": "Limone siciliano intenso e morbido.",
+    "botanicals": ["Limone siciliano", "Ginepro"],
+    "tastingNotes": "Al naso è intenso il profumo dei limoni freschi. All'assaggio il limone e il ginepro sono perfettamente in equilibrio.",
+    "alcohol": "40% vol",
+    "price": 35,
+    "volume": "50cl"
+  },
+  {
+    "id": 3,
+    "name": "Orange & Chocolate Gin",
+    "slug": "orange-chocolate",
+    "image": "/assets/images/orange-chocolate.jpg",
+    "description": "Arancia amara e cacao croccante.",
+    "botanicals": ["Arancia amara", "Cacao amaro", "Ginepro"],
+    "tastingNotes": "Al naso prevale l'aroma croccante del cacao amaro. All'assaggio il ginepro è intenso ma ammorbidito dalle note di arancia e cioccolato.",
+    "alcohol": "40% vol",
+    "price": 35,
+    "volume": "50cl"
+  }
+]

@@ -1,0 +1,178 @@
+/* src/components/Products.css */
+
+.products-section {
+  background-color: #111111;
+  color: white;
+  padding: 80px 0;
+}
+
+.products-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 2rem;
+}
+
+/* --- CARD PRODOTTO --- */
+.product-card {
+  background-color: #0a0a0a;
+  border-radius: 12px;
+  border: 1px solid #333;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 15px;
+  justify-content: start;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+  border-color: #d4af37;
+}
+
+/* --- CONTENITORE IMMAGINE: altezza fissa per coerenza --- */
+.product-img-wrapper {
+  height: 200px; /* Mobile di default */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 5px 0;
+}
+
+/* --- Immagine prodotto --- */
+.product-img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  border: 2px solid #d4af37;
+  transition: transform 0.3s ease;
+}
+
+.product-img:hover {
+  transform: scale(1.25);
+}
+
+/* --- TESTO --- */
+.product-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #d4af37;
+  margin: 15px 0 8px 0;
+  font-weight: 600;
+}
+
+.product-desc {
+  font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  color: white;
+  margin: 15px 0 0 0;
+  font-weight: 600;
+}
+
+/* --- BOTTONE --- */
+.btn-gold {
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  width: fit-content;
+  margin-top: auto;
+}
+
+.btn-gold:hover {
+  background-color: #e5b840;
+  transform: scale(1.05);
+}
+
+/* --- RESPONSIVE: MOBILE (fino a 767px) --- */
+@media (max-width: 767px) {
+  .product-img-wrapper {
+    height: 200px;
+  }
+
+  .product-card {
+    padding: 12px;
+  }
+
+  .product-name {
+    font-size: 1.3rem;
+  }
+
+  .product-desc {
+    font-size: 0.95rem;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- RESPONSIVE: TABLET (768px - 991px) --- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .product-img-wrapper {
+    height: 220px;
+  }
+
+  .product-card {
+    padding: 12px;
+  }
+
+  .product-name {
+    font-size: 1.3rem;
+  }
+
+  .product-desc {
+    font-size: 0.95rem;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- DESKTOP (992px e oltre) --- */
+@media (min-width: 992px) {
+  .product-img-wrapper {
+    height: 260px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-name {
+    font-size: 1.4rem;
+  }
+
+  .product-desc {
+    font-size: 1rem;
+  }
+
+  .product-price {
+    font-size: 1.2rem;
+  }
+}

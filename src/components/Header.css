@@ -1,0 +1,138 @@
+/* --- HEADER RESPONSIVE: MOBILE-FIRST (320px → 1200px) --- */
+
+/* Base reset */
+.header-brand {
+  min-width: 0;
+}
+
+.header-brand-text {
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.header-brand-line1,
+.header-brand-line2 {
+  color: #d4af37;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-brand-line1 {
+  font-size: 0.75rem;
+}
+
+/* --- LAYOUT RESPONSIVO PER CELLULARI --- */
+
+/* iPhone SE / 320px - 375px: testo sotto il logo */
+@media (max-width: 375px) {
+  .header-brand {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-logo {
+    margin-bottom: 4px;
+    margin-right: 0 !important;
+  }
+
+  .header-brand-line1 {
+    font-size: 0.7rem;
+  }
+
+  .header-brand-line2 {
+    font-size: 0.75rem;
+    letter-spacing: 0.2px;
+  }
+}
+
+/* Da 376px in su: affianca logo e testo */
+@media (min-width: 376px) {
+  .header-brand {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header-brand-text {
+    margin-left: 2px;
+  }
+
+  .header-brand-line1 {
+    font-size: 0.75rem;
+  }
+
+  .header-brand-line2 {
+    font-size: 0.85rem;
+  }
+}
+
+/* Medium devices (576px+) */
+@media (min-width: 576px) {
+  .header-brand-line1 {
+    font-size: 0.85rem;
+  }
+
+  .header-brand-line2 {
+    font-size: 0.95rem;
+  }
+
+  .header-logo {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Large devices (768px+) */
+@media (min-width: 768px) {
+  .header-brand-line1 {
+    font-size: 1rem;
+  }
+
+  .header-brand-line2 {
+    font-size: 1.05rem;
+  }
+}
+
+/* Extra large (992px+) */
+@media (min-width: 992px) {
+  .header-brand-line1 {
+    font-size: 1.1rem;
+  }
+
+  .header-brand-line2 {
+    font-size: 1.15rem;
+  }
+}
+
+/* --- NAV LINKS --- */
+.header-nav-link {
+  color: white !important;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  margin: 0 0.5rem !important;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+}
+
+.header-nav-link:hover {
+  color: #d4af37 !important;
+  background-color: rgba(212, 175, 55, 0.1);
+}
+
+/* --- NAVBAR BASE --- */
+.header-navbar {
+  background-color: #000 !important;
+  border-bottom: 1px solid #d4af37;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* --- LOGO --- */
+.header-logo {
+  transition: width 0.2s ease;
+}

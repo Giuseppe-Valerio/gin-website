@@ -1,0 +1,45 @@
+/* src/index.css */
+
+/* Colore oro personalizzato (più elegante del giallo di Bootstrap) */
+.text-gold {
+  color: #d4af37 !important; /* Oro classico, come nei gioielli */
+}
+
+.bg-gold {
+  background-color: #d4af37 !important;
+}
+
+.btn-gold {
+  background-color: #d4af37;
+  border: none;
+  color: #000;
+  font-weight: 500;
+}
+.btn-gold:hover {
+  background-color: #e5b840;
+  color: #000;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Sfondo nero profondo */
+.bg-black {
+  background-color: #000 !important;
+}
+
+/* Testo bianco con eleganza */
+.text-light-gold {
+  color: #f5f5f5;
+}
+
+/* Effetto ombra per elementi premium */
+.shadow-gold {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Stile per titoli */
+.title-gold {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,113 @@
+/* --- CONTATTACI: SEZIONE COMPLETA --- */
+.contact-section {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 80px 0;
+}
+
+.contact-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 2rem;
+}
+
+/* --- ETICHETTE (es: 📍 Indirizzo) - COLORE GIALLO --- */
+.contact-label {
+  font-size: 1.1rem;
+  color: #d4af37;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+/* --- DATI DI CONTATTO (testo normale) - COLORE BIANCO --- */
+.contact-text {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- LINK (email e telefono) - BIANCO di default, giallo al hover --- */
+.contact-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #d4af37;
+  text-decoration: underline;
+}
+
+/* --- MAPPA --- */
+.contact-map {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* --- SPORTELLO VERTICALE TRA GLI ELEMENTI --- */
+.contact-item {
+  padding: 12px 0;
+}
+
+/* --- RESPONSIVE: SCHERMI MOBILE (< 768px) --- */
+@media (max-width: 767.98px) {
+  .contact-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .contact-label,
+  .contact-text,
+  .contact-link {
+    text-align: center;
+  }
+
+  .contact-link {
+    display: block;
+  }
+
+  .contact-item {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .contact-label {
+    font-size: 1.15rem;
+  }
+
+  .contact-text {
+    font-size: 1.05rem;
+  }
+
+  .contact-map iframe {
+    height: 350px;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* --- RESPONSIVE: SCHERMI MEDIUM (768px - 991.98px) --- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .contact-label,
+  .contact-text,
+  .contact-link {
+    text-align: center;
+  }
+
+  .contact-title {
+    text-align: center;
+  }
+
+  .contact-map iframe {
+    border-radius: 12px;
+  }
+}

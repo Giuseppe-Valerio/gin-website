@@ -1,0 +1,169 @@
+/* Overlay che copre l'intera schermata */
+.age-gate-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95)),
+    url("/assets/images/hero-bg.jpg") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  pointer-events: auto;
+  animation: fadeInOverlay 1s ease-out;
+}
+
+/* Effetto stelle */
+.hero-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-stars::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1.5px 1.5px at 20px 30px, #d4af37, transparent),
+    radial-gradient(1px 1px at 40px 70px, #f5f5f5, transparent),
+    radial-gradient(1px 1px at 100px 150px, #d4af37, transparent),
+    radial-gradient(1px 1px at 200px 250px, #f5f5f5, transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: twinkle 5s linear infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* Contenuto centrale */
+.age-gate-content {
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Titolo principale */
+.age-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Domanda */
+.age-question {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0.5rem 0 2rem 0;
+  color: #d4af37;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Pulsanti */
+.age-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-yes,
+.btn-no {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-yes {
+  background-color: #d4af37;
+  color: #000;
+}
+
+.btn-yes:hover {
+  background-color: #e5b840;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5);
+}
+
+.btn-no {
+  background-color: #333;
+  color: white;
+}
+
+.btn-no:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+/* Slogan in basso */
+.age-disclaimer {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #aaa;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Blocco dello scroll del body quando l'overlay è attivo */
+body.age-gate-active {
+  overflow: hidden;
+}

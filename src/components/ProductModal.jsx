@@ -2,6 +2,18 @@
 import React from "react";
 import "./ProductModal.css";
 
+// Importa le immagini
+import londonDryImg from "../assets/images/london-dry.jpg";
+import lemonDryImg from "../assets/images/lemon-dry.jpg";
+import orangeChocolateImg from "../assets/images/orange-chocolate.jpg";
+
+// Mappa i nomi delle immagini agli import
+const productImages = {
+  "london-dry.jpg": londonDryImg,
+  "lemon-dry.jpg": lemonDryImg,
+  "orange-chocolate.jpg": orangeChocolateImg,
+};
+
 const ProductModal = ({ product, onClose }) => {
   if (!product) return null;
 
@@ -13,7 +25,10 @@ const ProductModal = ({ product, onClose }) => {
         </button>
         <div className="modal-body">
           <div className="modal-image">
-            <img src={product.image} alt={product.name} />
+            <img
+              src={productImages[product.image]} // ✅ Immagine importata
+              alt={product.name}
+            />
           </div>
           <div className="modal-info">
             <h2 className="modal-title">{product.name}</h2>

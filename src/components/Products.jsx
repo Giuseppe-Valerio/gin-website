@@ -1,18 +1,25 @@
 // src/components/Products.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Products.css";
 import ProductModal from "./ProductModal";
 
-const Products = () => {
-  const [products, setProducts] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+// Importa le immagini dei prodotti
+import londonDryImg from "../assets/images/london-dry.jpg";
+import lemonDryImg from "../assets/images/lemon-dry.jpg";
+import orangeChocolateImg from "../assets/images/orange-chocolate.jpg";
 
-  useEffect(() => {
-    fetch("/data/products.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((err) => console.error("Errore nel caricamento dei prodotti:", err));
-  }, []);
+// Mappa i nomi delle immagini agli import
+const productImages = {
+  "london-dry.jpg": londonDryImg,
+  "lemon-dry.jpg": lemonDryImg,
+  "orange-chocolate.jpg": orangeChocolateImg,
+};
+
+// Importa i dati dei prodotti
+import productsData from "../data/products.json";
+
+const Products = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const openModal = (product) => {
     setSelectedProduct(product);
@@ -21,6 +28,9 @@ const Products = () => {
   const closeModal = () => {
     setSelectedProduct(null);
   };
+
+  // Usa direttamente i dati importati
+  const products = productsData;
 
   return (
     <section id="products" className="products-section py-5">
@@ -35,7 +45,11 @@ const Products = () => {
             <div key={product.id} className="col-md-4 mb-4">
               <div className="product-card text-center d-flex flex-column h-100">
                 <div className="product-img-wrapper">
-                  <img src={product.image} alt={product.name} className="product-img" />
+                  <img
+                    src={productImages[product.image]} // ✅ Immagine importata
+                    alt={product.name}
+                    className="product-img"
+                  />
                 </div>
                 <h3 className="product-name">{product.name}</h3>
                 <p className="product-desc flex-grow-1">{product.description}</p>

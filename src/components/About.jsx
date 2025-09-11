@@ -2,6 +2,9 @@
 import React from "react";
 import "./About.css";
 
+// Importa l'immagine correttamente da src/assets
+import aboutJeremyImg from "../assets/images/about-jeremy.jpg";
+
 const About = () => {
   return (
     <section id="about" className="about-section py-5">
@@ -39,10 +42,10 @@ const About = () => {
             </p>
           </div>
 
-          {/* Colonna foto */}
+          {/* Colonna foto — AGGIORNATA */}
           <div className="col-md-6 text-center">
             <img
-              src="/assets/images/about-jeremy.jpg"
+              src={aboutJeremyImg}
               alt="Jeremy Palazzolo - Fondatore della Distilleria Casale della Montagna"
               className="about-img img-fluid rounded shadow-lg"
             />
